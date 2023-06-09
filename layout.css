@@ -1,0 +1,166 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.inicio{
+
+text-align: center;
+
+
+}
+
+#Titulos{
+
+  
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: rgb(255, 255, 255);
+
+
+
+}
+#textos{
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: -3px;
+}
+#semilista{
+ 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:  rgb(65, 54, 40);
+
+}
+li{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+
+}
+#contato{
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:  rgb(65, 54, 40);
+}
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+a:hover{
+
+    opacity: 0.8;
+}
+.logo{
+
+      font-size: 24px;
+      text-transform: uppercase;
+      initial-letter: 4px;
+
+
+}
+nav{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: rgb(98, 76, 76);
+    height: 8vh;
+}
+.navlist{
+
+    list-style: none;
+    display: flex;
+
+}
+.navlist li{
+
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+.mobilemenu{
+
+    display: none;
+    cursor: pointer;
+    
+}
+
+.mobilemenu div{
+
+        width: 32px;
+        height: 2px;
+        background: rgb(255, 255, 255);
+        margin: 8px;
+        transition: 0.3s;
+
+}
+@media (max-width: 999px){
+
+    body{
+
+        overflow-x: hidden;
+
+    }
+     .navlist{
+
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 90vw;
+        height: 92vh;
+        background: rgb(98, 76, 76);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+
+
+
+     }
+     .navlist li{
+
+        margin-left: 0;
+        opacity: 0;
+
+     }
+     .mobilemenu{
+
+        display: block;
+
+
+     }
+
+}
+.navlist.active{
+
+    transform: translateX(0);
+}
+@keyframes navlinkfade{
+
+from{
+ opacity: 0;
+ transform: translateX(50px);
+}
+to{
+   opacity: 1;
+}
+}
+.mobilemenu.active.line1{
+
+    transform: rotate(45deg) translate(-8px -8px);
+
+}
+.mobilemenu.active.line2{
+
+    opacity: 0;
+
+}
+.mobilemenu.active.line3{
+
+    transform: rotate(45deg) translate(-8px -8px);
+}
